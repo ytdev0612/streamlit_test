@@ -158,7 +158,7 @@ def iou(box1, box2):
 
 
 # 모델 파일명 리스트
-model_files = [f'models/model{model_number}.pt' for model_number in [1, 2, 3, 4, 5]] # 밴: model8, model10
+model_files = [f'models/model{model_number}.pt' for model_number in [1] # 밴: model8, model10
 
 # 모델 로드 및 names 저장
 models = []

@@ -3,6 +3,7 @@ from Draw import *
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer
 import av
+import ultralytics
 
 # 페이지 기본 설정
 st.set_page_config(
@@ -58,6 +59,8 @@ rtc_configuration = {
     "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}] # STUN 서버
     # TURN 서버: 선택사항
 }
+
+st.write(ultralytics.checks())
 
 # 스트리밍 ui
 webrtc_streamer(key="streamer", video_frame_callback=transform, rtc_configuration=rtc_configuration, sendback_audio=False)
